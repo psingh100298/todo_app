@@ -19,12 +19,15 @@ export class AddTodoComponent {
     console.log(this.todo);
     this.apiService.addTodo(this.todo).subscribe({
       next:(data)=>{
-
+          console.log(data);
+          alert('todo added')
       },
       error:(error)=>{
+        console.log(error);
 
       },
       complete:()=>{
+        console.log('request completed!!')
         
       }
     })
